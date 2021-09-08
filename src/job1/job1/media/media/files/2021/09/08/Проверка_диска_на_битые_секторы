@@ -1,0 +1,10 @@
+sudo badblocks -sv /dev/sda1 > badsectors.txt    -Запись битых секторов в файл
+sudo e2fsck -l badsectors.txt /dev/sda1         -Не записывать в битые сектора(ext2/3/4)
+sudo fsck -l badsectors.txt /dev/sda1           -То же самое(другая файловая система)
+sudo nano /etc/network/interfaces
+        В конец файла
+             ||
+             ||
+            \  /
+             \/
+pre-up e2fsck -l ~/badblocks.txt /dev/sda1

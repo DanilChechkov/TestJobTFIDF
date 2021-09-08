@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Copyright" content="Чечков Данил">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}">
+    <title>{% block title %}DANIL CHECHKOV{% endblock %}</title>
+</head>
+<body>
+    <h1>Now? Please, hire me!</h1>
+    <table>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Word
+            </th>
+            <th>
+                Repeats
+            </th>
+            <th>
+                TF
+            </th>
+            <th>
+                IDF
+            </th>
+        </tr>
+        {% for word in list%}
+        {% if forloop.counter == 51 %} 
+    </table>
+    <button id='nobut' onclick="ShowMe()">Тут ещё много, кликни на меня!</button>
+    <table id='extra' style="display: none;"> {%endif %}
+        <tr>
+            <th>
+                {{forloop.counter}}
+            </th>
+            <th>
+                {{word.0}}
+            </th>
+            <th>
+                {{word.1.0}}
+            </th>
+            <th>
+                {{word.1.1}}
+            </th>
+            <th>
+                {{word.1.2}}
+            </th>
+        </tr>
+        {% if list|length == forloop.counter %}</table>{% endif %}
+        {% endfor %}
+</body>
+<script language="JavaScript" type="text/javascript">
+    function ShowMe() {
+        var table = document.getElementById('extra');
+        table.style.display = "table";
+        var btn = document.getElementById('nobut');
+        btn.style.display = "none";
+    }
+</script>

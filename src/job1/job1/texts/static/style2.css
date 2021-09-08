@@ -1,0 +1,44 @@
+html{
+    font-family:Roboto;
+}
+body{
+    text-align: center;
+    background-color: #a28ed1;
+    color:#F0F0F0;
+    font-size: 2vw;
+    font-family: Raleway;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    padding-left: 2vh;
+}
+button{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #a28ed1;
+    box-sizing: border-box;
+    border: 0.25vw solid;
+    width: 40vw;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    border-radius: 1vw;
+    border-color: #ffffff;
+    color: #F0F0F0;
+    transition: color .2s;
+}
+button:hover{
+    background-color: #7f6fa7;
+}

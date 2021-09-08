@@ -1,0 +1,39 @@
+Открываем конфиг root:
+sudo nano /etc/pulse/daemon.conf
+
+Меняем значения:
+resample-method
+        И
+default-sample-format
+
+
+Для resample-method:
+src-sinc-best-quality
+src-sinc-medium-quality
+src-sinc-fastest
+src-zero-order-hold
+src-linear
+trivial
+speex-float-N
+speex-fixed-N
+ffmpeg.
+    N:1-9 - больше число - выше качество
+ 
+Для default-sample-format:
+u8
+s16le
+s16be
+s24le
+s24be
+s24-32le
+s24-32be
+s32le
+s32be
+float32le
+float32be
+ulaw
+alaw
+
+
+По завершению:
+pulseaudio --kill && pulseaudio --start
